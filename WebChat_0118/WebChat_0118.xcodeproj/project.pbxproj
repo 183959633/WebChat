@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE4786062007668100627E0E /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4786052007668100627E0E /* LoginView.m */; };
+		CE47860A2007675800627E0E /* JackHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4786092007675800627E0E /* JackHttp.m */; };
+		CE4786742007756E00627E0E /* CentreView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4786502007756E00627E0E /* CentreView.m */; };
+		CE4786752007756E00627E0E /* WebChatTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4786522007756E00627E0E /* WebChatTableViewController.m */; };
+		CE4786772007756E00627E0E /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4786592007756E00627E0E /* BaseModel.m */; };
+		CE4786792007756E00627E0E /* WebChatModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47865C2007756E00627E0E /* WebChatModel.m */; };
+		CE47867A2007756E00627E0E /* WebChatMessageEmojiCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4786612007756E00627E0E /* WebChatMessageEmojiCollectionCell.m */; };
+		CE47867B2007756E00627E0E /* WebChatMessageEmojiView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4786622007756E00627E0E /* WebChatMessageEmojiView.m */; };
+		CE47867C2007756E00627E0E /* WebChatMessageInputBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4786652007756E00627E0E /* WebChatMessageInputBar.m */; };
+		CE47867D2007756E00627E0E /* WebChatMessageMoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4786672007756E00627E0E /* WebChatMessageMoreView.m */; };
+		CE47867E2007756E00627E0E /* WebChatImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47866A2007756E00627E0E /* WebChatImageTableViewCell.m */; };
+		CE4786802007756E00627E0E /* WebChatVoiceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47866D2007756E00627E0E /* WebChatVoiceTableViewCell.m */; };
+		CE4786812007756E00627E0E /* WebChatTextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47866E2007756E00627E0E /* WebChatTextTableViewCell.m */; };
+		CE4786822007756E00627E0E /* WebChatBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47866F2007756E00627E0E /* WebChatBaseTableViewCell.m */; };
+		CE83B432202188A200D29F28 /* UIImage+aScaling.m in Sources */ = {isa = PBXBuildFile; fileRef = CE83B431202188A200D29F28 /* UIImage+aScaling.m */; };
+		CE83B4342021C5AD00D29F28 /* Speech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE83B4332021C5AD00D29F28 /* Speech.framework */; };
+		CE85338520286B710006689C /* WebChatFlickerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE85338420286B710006689C /* WebChatFlickerTableViewCell.m */; };
+		CE9E9757201B1CA20035BB7E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9E9756201B1CA20035BB7E /* Images.xcassets */; };
+		CEB7CC17202C4E4A003B90F5 /* WebChatCustomHorizontalLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB7CC15202C4E49003B90F5 /* WebChatCustomHorizontalLayout.m */; };
+		CEB7CC19202C6D42003B90F5 /* Expression.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEB7CC18202C6D42003B90F5 /* Expression.plist */; };
+		CEDC875B20075B7800514420 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDC875A20075B7800514420 /* AppDelegate.m */; };
+		CEDC875E20075B7800514420 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDC875D20075B7800514420 /* RootViewController.m */; };
+		CEDC876320075B7800514420 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDC876220075B7800514420 /* Assets.xcassets */; };
+		CEDC876920075B7800514420 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDC876820075B7800514420 /* main.m */; };
+		DEBCC90BD9CE41A75E0956FA /* libPods-WebChat_0118.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBEAF63ABA683D12AF0EE04B /* libPods-WebChat_0118.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A3AED66FC12943149BED756E /* Pods-WebChat_0118.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebChat_0118.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WebChat_0118/Pods-WebChat_0118.debug.xcconfig"; sourceTree = "<group>"; };
+		CE4786042007668100627E0E /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
+		CE4786052007668100627E0E /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
+		CE4786082007675800627E0E /* JackHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JackHttp.h; sourceTree = "<group>"; };
+		CE4786092007675800627E0E /* JackHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JackHttp.m; sourceTree = "<group>"; };
+		CE47864F2007756E00627E0E /* CentreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CentreView.h; sourceTree = "<group>"; };
+		CE4786502007756E00627E0E /* CentreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CentreView.m; sourceTree = "<group>"; };
+		CE4786522007756E00627E0E /* WebChatTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebChatTableViewController.m; sourceTree = "<group>"; };
+		CE4786542007756E00627E0E /* WebChatTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebChatTableViewController.h; sourceTree = "<group>"; };
+		CE4786582007756E00627E0E /* WebChatModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebChatModel.h; sourceTree = "<group>"; };
+		CE4786592007756E00627E0E /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		CE47865B2007756E00627E0E /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		CE47865C2007756E00627E0E /* WebChatModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebChatModel.m; sourceTree = "<group>"; };
+		CE47865F2007756E00627E0E /* WebChatMessageEmojiCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebChatMessageEmojiCollectionCell.h; sourceTree = "<group>"; };
+		CE4786602007756E00627E0E /* WebChatMessageEmojiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebChatMessageEmojiView.h; sourceTree = "<group>"; };
+		CE4786612007756E00627E0E /* WebChatMessageEmojiCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebChatMessageEmojiCollectionCell.m; sourceTree = "<group>"; };
+		CE4786622007756E00627E0E /* WebChatMessageEmojiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebChatMessageEmojiView.m; sourceTree = "<group>"; };
+		CE4786642007756E00627E0E /* WebChatMessageInputBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebChatMessageInputBar.h; sourceTree = "<group>"; };
+		CE4786652007756E00627E0E /* WebChatMessageInputBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebChatMessageInputBar.m; sourceTree = "<group>"; };
+		CE4786672007756E00627E0E /* WebChatMessageMoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebChatMessageMoreView.m; sourceTree = "<group>"; };
+		CE4786682007756E00627E0E /* WebChatMessageMoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebChatMessageMoreView.h; sourceTree = "<group>"; };
+		CE47866A2007756E00627E0E /* WebChatImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebChatImageTableViewCell.m; sourceTree = "<group>"; };
+		CE47866C2007756E00627E0E /* WebChatBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebChatBaseTableViewCell.h; sourceTree = "<group>"; };
+		CE47866D2007756E00627E0E /* WebChatVoiceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebChatVoiceTableViewCell.m; sourceTree = "<group>"; };
+		CE47866E2007756E00627E0E /* WebChatTextTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebChatTextTableViewCell.m; sourceTree = "<group>"; };
+		CE47866F2007756E00627E0E /* WebChatBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebChatBaseTableViewCell.m; sourceTree = "<group>"; };
+		CE4786702007756E00627E0E /* WebChatImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebChatImageTableViewCell.h; sourceTree = "<group>"; };
+		CE4786722007756E00627E0E /* WebChatVoiceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebChatVoiceTableViewCell.h; sourceTree = "<group>"; };
+		CE4786732007756E00627E0E /* WebChatTextTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebChatTextTableViewCell.h; sourceTree = "<group>"; };
+		CE83B430202188A200D29F28 /* UIImage+aScaling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+aScaling.h"; sourceTree = "<group>"; };
+		CE83B431202188A200D29F28 /* UIImage+aScaling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+aScaling.m"; sourceTree = "<group>"; };
+		CE83B4332021C5AD00D29F28 /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = System/Library/Frameworks/Speech.framework; sourceTree = SDKROOT; };
+		CE85338320286B710006689C /* WebChatFlickerTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebChatFlickerTableViewCell.h; sourceTree = "<group>"; };
+		CE85338420286B710006689C /* WebChatFlickerTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebChatFlickerTableViewCell.m; sourceTree = "<group>"; };
+		CE9E9756201B1CA20035BB7E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CEB7CC15202C4E49003B90F5 /* WebChatCustomHorizontalLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebChatCustomHorizontalLayout.m; sourceTree = "<group>"; };
+		CEB7CC16202C4E4A003B90F5 /* WebChatCustomHorizontalLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebChatCustomHorizontalLayout.h; sourceTree = "<group>"; };
+		CEB7CC18202C6D42003B90F5 /* Expression.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Expression.plist; sourceTree = "<group>"; };
+		CEDC875620075B7800514420 /* WebChat_0118.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebChat_0118.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEDC875920075B7800514420 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CEDC875A20075B7800514420 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CEDC875C20075B7800514420 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		CEDC875D20075B7800514420 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		CEDC876220075B7800514420 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEDC876720075B7800514420 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEDC876820075B7800514420 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DBEAF63ABA683D12AF0EE04B /* libPods-WebChat_0118.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WebChat_0118.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F90738016C1738C79285635F /* Pods-WebChat_0118.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebChat_0118.release.xcconfig"; path = "Pods/Target Support Files/Pods-WebChat_0118/Pods-WebChat_0118.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEDC875320075B7800514420 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE83B4342021C5AD00D29F28 /* Speech.framework in Frameworks */,
+				DEBCC90BD9CE41A75E0956FA /* libPods-WebChat_0118.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		181D8DA62AA05EB12EFB5388 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A3AED66FC12943149BED756E /* Pods-WebChat_0118.debug.xcconfig */,
+				F90738016C1738C79285635F /* Pods-WebChat_0118.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CE4786022007664200627E0E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE4786042007668100627E0E /* LoginView.h */,
+				CE4786052007668100627E0E /* LoginView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE4786032007665700627E0E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC875C20075B7800514420 /* RootViewController.h */,
+				CEDC875D20075B7800514420 /* RootViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CE4786072007671D00627E0E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CE4786082007675800627E0E /* JackHttp.h */,
+				CE4786092007675800627E0E /* JackHttp.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CE47864D2007756E00627E0E /* ContentController */ = {
+			isa = PBXGroup;
+			children = (
+				CE4786562007756E00627E0E /* Model */,
+				CE47865D2007756E00627E0E /* View */,
+				CE4786512007756E00627E0E /* Controller */,
+			);
+			path = ContentController;
+			sourceTree = "<group>";
+		};
+		CE4786512007756E00627E0E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE4786542007756E00627E0E /* WebChatTableViewController.h */,
+				CE4786522007756E00627E0E /* WebChatTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CE4786562007756E00627E0E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE4786582007756E00627E0E /* WebChatModel.h */,
+				CE47865C2007756E00627E0E /* WebChatModel.m */,
+				CE47865B2007756E00627E0E /* BaseModel.h */,
+				CE4786592007756E00627E0E /* BaseModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE47865D2007756E00627E0E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE4786632007756E00627E0E /* Other */,
+				CE47865E2007756E00627E0E /* Face */,
+				CE4786662007756E00627E0E /* More */,
+				CE4786692007756E00627E0E /* WebChatCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE47865E2007756E00627E0E /* Face */ = {
+			isa = PBXGroup;
+			children = (
+				CE4786602007756E00627E0E /* WebChatMessageEmojiView.h */,
+				CE4786622007756E00627E0E /* WebChatMessageEmojiView.m */,
+				CEB7CC16202C4E4A003B90F5 /* WebChatCustomHorizontalLayout.h */,
+				CEB7CC15202C4E49003B90F5 /* WebChatCustomHorizontalLayout.m */,
+				CE47865F2007756E00627E0E /* WebChatMessageEmojiCollectionCell.h */,
+				CE4786612007756E00627E0E /* WebChatMessageEmojiCollectionCell.m */,
+			);
+			path = Face;
+			sourceTree = "<group>";
+		};
+		CE4786632007756E00627E0E /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				CE47864F2007756E00627E0E /* CentreView.h */,
+				CE4786502007756E00627E0E /* CentreView.m */,
+				CE4786642007756E00627E0E /* WebChatMessageInputBar.h */,
+				CE4786652007756E00627E0E /* WebChatMessageInputBar.m */,
+				CE83B430202188A200D29F28 /* UIImage+aScaling.h */,
+				CE83B431202188A200D29F28 /* UIImage+aScaling.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		CE4786662007756E00627E0E /* More */ = {
+			isa = PBXGroup;
+			children = (
+				CE4786682007756E00627E0E /* WebChatMessageMoreView.h */,
+				CE4786672007756E00627E0E /* WebChatMessageMoreView.m */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+		CE4786692007756E00627E0E /* WebChatCell */ = {
+			isa = PBXGroup;
+			children = (
+				CE4786732007756E00627E0E /* WebChatTextTableViewCell.h */,
+				CE47866E2007756E00627E0E /* WebChatTextTableViewCell.m */,
+				CE4786702007756E00627E0E /* WebChatImageTableViewCell.h */,
+				CE47866A2007756E00627E0E /* WebChatImageTableViewCell.m */,
+				CE4786722007756E00627E0E /* WebChatVoiceTableViewCell.h */,
+				CE47866D2007756E00627E0E /* WebChatVoiceTableViewCell.m */,
+				CE85338320286B710006689C /* WebChatFlickerTableViewCell.h */,
+				CE85338420286B710006689C /* WebChatFlickerTableViewCell.m */,
+				CE47866C2007756E00627E0E /* WebChatBaseTableViewCell.h */,
+				CE47866F2007756E00627E0E /* WebChatBaseTableViewCell.m */,
+			);
+			path = WebChatCell;
+			sourceTree = "<group>";
+		};
+		CEDC874D20075B7800514420 = {
+			isa = PBXGroup;
+			children = (
+				CEDC875820075B7800514420 /* WebChat_0118 */,
+				CEDC875720075B7800514420 /* Products */,
+				CEDC87B920075EA800514420 /* Frameworks */,
+				181D8DA62AA05EB12EFB5388 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		CEDC875720075B7800514420 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC875620075B7800514420 /* WebChat_0118.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEDC875820075B7800514420 /* WebChat_0118 */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC878B20075BAF00514420 /* Main */,
+				CEDC878D20075BD700514420 /* Login */,
+				CE4786072007671D00627E0E /* Network */,
+				CE47864D2007756E00627E0E /* ContentController */,
+			);
+			path = WebChat_0118;
+			sourceTree = "<group>";
+		};
+		CEDC878B20075BAF00514420 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC875920075B7800514420 /* AppDelegate.h */,
+				CEDC875A20075B7800514420 /* AppDelegate.m */,
+				CEDC876220075B7800514420 /* Assets.xcassets */,
+				CE9E9756201B1CA20035BB7E /* Images.xcassets */,
+				CEDC876720075B7800514420 /* Info.plist */,
+				CEDC876820075B7800514420 /* main.m */,
+				CEB7CC18202C6D42003B90F5 /* Expression.plist */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CEDC878D20075BD700514420 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CE4786032007665700627E0E /* Controller */,
+				CE4786022007664200627E0E /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CEDC87B920075EA800514420 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE83B4332021C5AD00D29F28 /* Speech.framework */,
+				DBEAF63ABA683D12AF0EE04B /* libPods-WebChat_0118.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEDC875520075B7800514420 /* WebChat_0118 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEDC878220075B7800514420 /* Build configuration list for PBXNativeTarget "WebChat_0118" */;
+			buildPhases = (
+				8D93F651FA9D7702F7EFDC7F /* [CP] Check Pods Manifest.lock */,
+				CEDC875220075B7800514420 /* Sources */,
+				CEDC875320075B7800514420 /* Frameworks */,
+				CEDC875420075B7800514420 /* Resources */,
+				988B678A94FDBB37A0A6DD2F /* [CP] Embed Pods Frameworks */,
+				36DCE42496BE4A3176CCB58B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WebChat_0118;
+			productName = WebChat_0118;
+			productReference = CEDC875620075B7800514420 /* WebChat_0118.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEDC874E20075B7800514420 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Jack;
+				TargetAttributes = {
+					CEDC875520075B7800514420 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CEDC875120075B7800514420 /* Build configuration list for PBXProject "WebChat_0118" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CEDC874D20075B7800514420;
+			productRefGroup = CEDC875720075B7800514420 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEDC875520075B7800514420 /* WebChat_0118 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEDC875420075B7800514420 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEDC876320075B7800514420 /* Assets.xcassets in Resources */,
+				CEB7CC19202C6D42003B90F5 /* Expression.plist in Resources */,
+				CE9E9757201B1CA20035BB7E /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		36DCE42496BE4A3176CCB58B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WebChat_0118/Pods-WebChat_0118-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D93F651FA9D7702F7EFDC7F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WebChat_0118-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		988B678A94FDBB37A0A6DD2F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WebChat_0118/Pods-WebChat_0118-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEDC875220075B7800514420 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE85338520286B710006689C /* WebChatFlickerTableViewCell.m in Sources */,
+				CE4786772007756E00627E0E /* BaseModel.m in Sources */,
+				CE47867C2007756E00627E0E /* WebChatMessageInputBar.m in Sources */,
+				CEDC875E20075B7800514420 /* RootViewController.m in Sources */,
+				CE4786802007756E00627E0E /* WebChatVoiceTableViewCell.m in Sources */,
+				CE4786742007756E00627E0E /* CentreView.m in Sources */,
+				CE4786752007756E00627E0E /* WebChatTableViewController.m in Sources */,
+				CE47860A2007675800627E0E /* JackHttp.m in Sources */,
+				CE83B432202188A200D29F28 /* UIImage+aScaling.m in Sources */,
+				CE4786822007756E00627E0E /* WebChatBaseTableViewCell.m in Sources */,
+				CE47867D2007756E00627E0E /* WebChatMessageMoreView.m in Sources */,
+				CEB7CC17202C4E4A003B90F5 /* WebChatCustomHorizontalLayout.m in Sources */,
+				CEDC876920075B7800514420 /* main.m in Sources */,
+				CE47867E2007756E00627E0E /* WebChatImageTableViewCell.m in Sources */,
+				CEDC875B20075B7800514420 /* AppDelegate.m in Sources */,
+				CE47867A2007756E00627E0E /* WebChatMessageEmojiCollectionCell.m in Sources */,
+				CE47867B2007756E00627E0E /* WebChatMessageEmojiView.m in Sources */,
+				CE4786792007756E00627E0E /* WebChatModel.m in Sources */,
+				CE4786062007668100627E0E /* LoginView.m in Sources */,
+				CE4786812007756E00627E0E /* WebChatTextTableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CEDC878020075B7800514420 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CEDC878120075B7800514420 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEDC878320075B7800514420 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3AED66FC12943149BED756E /* Pods-WebChat_0118.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = /Users/User/Desktop/WebChat_0118/WebChat_0118/Main/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "Pactera.WebChat-0118";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		CEDC878420075B7800514420 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F90738016C1738C79285635F /* Pods-WebChat_0118.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = /Users/User/Desktop/WebChat_0118/WebChat_0118/Main/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "Pactera.WebChat-0118";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEDC875120075B7800514420 /* Build configuration list for PBXProject "WebChat_0118" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEDC878020075B7800514420 /* Debug */,
+				CEDC878120075B7800514420 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEDC878220075B7800514420 /* Build configuration list for PBXNativeTarget "WebChat_0118" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEDC878320075B7800514420 /* Debug */,
+				CEDC878420075B7800514420 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CEDC874E20075B7800514420 /* Project object */;
+}

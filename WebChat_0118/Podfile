@@ -1,0 +1,9 @@
+platform :ios, '10.0'
+
+target "WebChat_0118" do
+
+pod 'Masonry'
+pod 'MBProgressHUD'
+pod 'PPNetworkHelper'
+
+end
