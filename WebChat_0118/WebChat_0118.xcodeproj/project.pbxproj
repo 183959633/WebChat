@@ -553,7 +553,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = /Users/User/Desktop/WebChat_0118/WebChat_0118/Main/Info.plist;
+				INFOPLIST_FILE = /Users/User/Desktop/WebChat/WebChat_0118/WebChat_0118/Main/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
@@ -573,7 +573,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = /Users/User/Desktop/WebChat_0118/WebChat_0118/Main/Info.plist;
+				INFOPLIST_FILE = /Users/User/Desktop/WebChat/WebChat_0118/WebChat_0118/Main/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
