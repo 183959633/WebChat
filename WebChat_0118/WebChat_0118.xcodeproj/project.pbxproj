@@ -128,8 +128,7 @@
 		CE4786072007671D00627E0E /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				CE4786082007675800627E0E /* JackHttp.h */,
-				CE4786092007675800627E0E /* JackHttp.m */,
+				CEC52AFA207228C200790754 /* Model */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -225,6 +224,15 @@
 				CE47866F2007756E00627E0E /* WebChatBaseTableViewCell.m */,
 			);
 			path = WebChatCell;
+			sourceTree = "<group>";
+		};
+		CEC52AFA207228C200790754 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE4786082007675800627E0E /* JackHttp.h */,
+				CE4786092007675800627E0E /* JackHttp.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		CEDC874D20075B7800514420 = {
