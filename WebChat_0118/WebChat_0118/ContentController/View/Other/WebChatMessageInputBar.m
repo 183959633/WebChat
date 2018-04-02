@@ -326,62 +326,57 @@
 #pragma mark - Getter Method
 -(UIButton *)mVoiceBtn
 {
-    if (_mVoiceBtn) {
-        return _mVoiceBtn;
+    if (!_mVoiceBtn) {
+        _mVoiceBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _mVoiceBtn.backgroundColor = [UIColor clearColor];
+        [_mVoiceBtn setImage:[UIImage imageNamed:@"chat_bottom_voice_nor"] forState:UIControlStateNormal];
+        [_mVoiceBtn setImage:[UIImage imageNamed:@"chat_bottom_voice_press"] forState:UIControlStateHighlighted];
+        [_mVoiceBtn  setImage:[UIImage imageNamed:@"chat_bottom_keyboard_nor"] forState:UIControlStateSelected];
+        [_mVoiceBtn addTarget:self action:@selector(voiceBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     }
-    _mVoiceBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_mVoiceBtn addTarget:self action:@selector(voiceBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-    _mVoiceBtn.backgroundColor = [UIColor clearColor];
-    [_mVoiceBtn setImage:[UIImage imageNamed:@"chat_bottom_voice_nor"] forState:UIControlStateNormal];
-    [_mVoiceBtn setImage:[UIImage imageNamed:@"chat_bottom_voice_press"] forState:UIControlStateHighlighted];
-    [_mVoiceBtn  setImage:[UIImage imageNamed:@"chat_bottom_keyboard_nor"] forState:UIControlStateSelected];
-    
     return _mVoiceBtn;
 }
 -(UITextView *)mInputTextView
 {
-    if (_mInputTextView) {
-        return _mInputTextView;
+    if (!_mInputTextView) {
+        _mInputTextView = [[UITextView alloc]init];
+        _mInputTextView.tag      = 101;
+        _mInputTextView.delegate = self;
+        _mInputTextView.layer.borderWidth   = 1;
+        _mInputTextView.layer.cornerRadius  = 4;
+        _mInputTextView.layer.masksToBounds = YES;
+        _mInputTextView.contentInset  = UIEdgeInsetsZero;
+        _mInputTextView.scrollEnabled = NO;
+        _mInputTextView.scrollsToTop  = NO;
+        _mInputTextView.userInteractionEnabled = YES;
+        _mInputTextView.keyboardType  = UIKeyboardTypeDefault;
+        _mInputTextView.returnKeyType = UIReturnKeySend;
+        _mInputTextView.textAlignment = NSTextAlignmentLeft;
+        _mInputTextView.font = [UIFont systemFontOfSize:14];
+        _mInputTextView.textColor = [UIColor blackColor];
+        _mInputTextView.backgroundColor    = [UIColor whiteColor];
+        _mInputTextView.keyboardAppearance = UIKeyboardAppearanceDefault;
+        _mInputTextView.scrollIndicatorInsets = UIEdgeInsetsMake(10.0f, 0.0f, 10.0f, 4.0f);
+        _mInputTextView.layer.borderColor = [[[UIColor lightGrayColor] colorWithAlphaComponent:0.4] CGColor];
     }
-    _mInputTextView = [[UITextView alloc]init];
-    _mInputTextView.delegate = self;
-    _mInputTextView.layer.borderWidth=1;
-    _mInputTextView.layer.cornerRadius = 4;
-    _mInputTextView.layer.masksToBounds = YES;
-    _mInputTextView.layer.borderColor = [[[UIColor lightGrayColor] colorWithAlphaComponent:0.4] CGColor];
-    _mInputTextView.scrollIndicatorInsets = UIEdgeInsetsMake(10.0f, 0.0f, 10.0f, 4.0f);
-    _mInputTextView.contentInset = UIEdgeInsetsZero;
-    _mInputTextView.scrollEnabled = NO;
-    _mInputTextView.scrollsToTop = NO;
-    _mInputTextView.userInteractionEnabled = YES;
-    _mInputTextView.font = [UIFont systemFontOfSize:14];
-    _mInputTextView.textColor = [UIColor blackColor];
-    _mInputTextView.backgroundColor = [UIColor whiteColor];
-    _mInputTextView.keyboardAppearance = UIKeyboardAppearanceDefault;
-    _mInputTextView.keyboardType = UIKeyboardTypeDefault;
-    _mInputTextView.returnKeyType = UIReturnKeySend;
-    _mInputTextView.textAlignment = NSTextAlignmentLeft;
-    _mInputTextView.tag =101;
     return _mInputTextView;
     
 }
 -(UIButton *)mInputButton
 {
-    if (_mInputButton) {
-        return _mInputButton;
+    if (!_mInputButton) {
+        _mInputButton = [[UIButton alloc]init];
+        _mInputButton.hidden = YES;
+        _mInputButton.layer.borderWidth   = 1;
+        _mInputButton.layer.cornerRadius  = 4;
+        _mInputButton.layer.masksToBounds = YES;
+        _mInputButton.backgroundColor     = [UIColor whiteColor];
+        [_mInputButton setTitle:@"按住 说话" forState:UIControlStateNormal];
+        _mInputButton.titleLabel.textAlignment = NSTextAlignmentCenter;
+        _mInputButton.titleLabel.font          = [UIFont systemFontOfSize:14.0f];
+        _mInputButton.layer.borderColor        = [[[UIColor lightGrayColor] colorWithAlphaComponent:0.4] CGColor];
+        [_mInputButton setTitleColor:[UIColor colorWithRed:129/255.0f green:129/255.0f blue:129/255.0f alpha:1.0f] forState:UIControlStateNormal];
     }
-    _mInputButton = [[UIButton alloc]init];
-    _mInputButton.hidden =YES;
-    [_mInputButton setTitle:@"按住 说话" forState:UIControlStateNormal];
-    _mInputButton.layer.borderWidth=1;
-    _mInputButton.layer.cornerRadius = 4;
-    _mInputButton.layer.masksToBounds = YES;
-    _mInputButton.layer.borderColor = [[[UIColor lightGrayColor] colorWithAlphaComponent:0.4] CGColor];
-    _mInputButton.titleLabel.font =[UIFont systemFontOfSize:14.0f];
-    [_mInputButton setTitleColor:[UIColor colorWithRed:129/255.0f green:129/255.0f blue:129/255.0f alpha:1.0f] forState:UIControlStateNormal];
-    _mInputButton.titleLabel.textAlignment =NSTextAlignmentCenter;
-    _mInputButton.backgroundColor = [UIColor whiteColor];
-    
     return _mInputButton;
 }
 -(UIButton *)mFaceBtn
@@ -391,7 +386,7 @@
         _mFaceBtn.backgroundColor = [UIColor clearColor];
         [_mFaceBtn setImage:[UIImage imageNamed:@"chat_bottom_smile_nor"] forState:UIControlStateNormal];
         [_mFaceBtn setImage:[UIImage imageNamed:@"chat_bottom_smile_press"] forState:UIControlStateHighlighted];
-        [_mFaceBtn  setImage:[UIImage imageNamed:@"chat_bottom_keyboard_nor"] forState:UIControlStateSelected];
+        [_mFaceBtn setImage:[UIImage imageNamed:@"chat_bottom_keyboard_nor"] forState:UIControlStateSelected];
         [_mFaceBtn addTarget:self action:@selector(faceBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     }
     
@@ -512,7 +507,7 @@
             if (self.delegate &&[self.delegate respondsToSelector:@selector(stickerInputBarDidClickSendButton:)]) {
                 [self.delegate stickerInputBarDidClickSendButton:self];
             }
-            textView.text =@"";
+            textView.text = @"";
             [self textViewDidChange:textView];
         }
         return NO;
@@ -533,7 +528,7 @@
     NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithAttributedString:_mInputTextView.attributedText];
     //初始化一个属性字符串附件对象
     NSTextAttachment *textAttachment = [[NSTextAttachment alloc]init];
-    textAttachment.image = emojiImage;
+    textAttachment.image  = emojiImage;
     textAttachment.bounds = CGRectMake(0, -3, 14, 14);
     //将附件转换成属性字符串
     NSAttributedString *textAttachmentString = [NSAttributedString attributedStringWithAttachment:textAttachment];
@@ -547,7 +542,7 @@
 }
 -(void)stickerKeyboardDidClickDeleteButton:(WebChatMessageEmojiView *)stickerKeyboard{
     
-    NSRange selectedRange = _mInputTextView.selectedRange;
+    NSRange selectedRange      = _mInputTextView.selectedRange;
     if (selectedRange.location == 0 && selectedRange.length == 0) {
         return;
     }
@@ -555,11 +550,11 @@
     if (selectedRange.length > 0) {
         [attributedText deleteCharactersInRange:selectedRange];
         _mInputTextView.attributedText = attributedText;
-        _mInputTextView.selectedRange = NSMakeRange(selectedRange.location, 0);
+        _mInputTextView.selectedRange  = NSMakeRange(selectedRange.location, 0);
     } else {
         [attributedText deleteCharactersInRange:NSMakeRange(selectedRange.location - 1, 1)];
         _mInputTextView.attributedText = attributedText;
-        _mInputTextView.selectedRange = NSMakeRange(selectedRange.location - 1, 0);
+        _mInputTextView.selectedRange  = NSMakeRange(selectedRange.location - 1, 0);
     }
     
     [self reckonInputTextViewHeight];
@@ -573,10 +568,8 @@
         if (![_mInputTextView.text isEqualToString:@""]) {
              [self.delegate stickerInputBarDidClickSendButton:self];
         }
-       
     }
-    _mInputTextView.text =@"";
-    
+    _mInputTextView.text = @"";
 }
 @end
 

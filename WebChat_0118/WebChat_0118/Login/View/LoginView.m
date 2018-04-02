@@ -17,8 +17,6 @@
 #define kButtonTitleColor_Selected       ([UIColor colorWithRed:59/255.0f green:172/255.0f blue:245/255.0f alpha:1.0f])
 @implementation LoginView
 {
-    
-    
     UIButton      *phoneNumberButton;         /**手机号phoneNumber**/
     UIButton      *cardNumberButton;          /**账卡号cardNumber**/
     UILabel       *kNumberLabel;

@@ -12,20 +12,18 @@
 #import "LoginView.h"
 #import "JackHttp.h"
 #import <MBProgressHUD.h>
-#import <PPNetworkHelper/PPNetworkHelper.h>
+#import <PPNetworkHelper.h>
 @interface RootViewController ()
 @end
 @implementation RootViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self setUI];
-
 }
 -(LoginView*)logview{
     if (!_logview) {
-        _logview =[[LoginView alloc]init];
+        _logview = [[LoginView alloc]init];
     }
     return _logview;
 }
@@ -44,11 +42,11 @@
         make.height.mas_equalTo(self.view.mas_height);
     }];
     
-    _logoImageView =[[UIImageView alloc]init];
+    _logoImageView = [[UIImageView alloc]init];
     [self.view addSubview:_logoImageView];
     _logoImageView.contentMode = UIViewContentModeScaleAspectFit;
     backgroundImageView.backgroundColor =[UIColor clearColor];
-    _logoImageView.image =[UIImage imageNamed:@"logo"];
+    _logoImageView.image = [UIImage imageNamed:@"logo"];
     
     [_logoImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         
@@ -74,7 +72,7 @@
         make.height.mas_equalTo(280);
     }];
     [_logview.loginButton addTarget:self action:@selector(Login) forControlEvents:UIControlEventTouchUpInside];
-    __weak typeof(self) weakSelf =self;
+    __weak typeof(self) weakSelf = self;
     _logview.resignblock = ^{
         [weakSelf updataLogview];
     };
@@ -115,7 +113,6 @@
               initialSpringVelocity:8.0 // 初始速度
                             options:UIViewAnimationOptionCurveLinear // 动画过渡效果
                          animations:^{
-                             // code...
                              _logoImageView.center = accountCenter;
                              [_logoImageView mas_updateConstraints:^(MASConstraintMaker *make) {
                                  if (Screen_Height == 568) {
@@ -126,11 +123,9 @@
                                      make.top.lessThanOrEqualTo(@100);
                                  }
                              }];
-                             
                          } completion:^(BOOL finished) {
                              // 动画完成后执行
                          }];
-        
     }
 }
 -(void)dealloc
@@ -155,18 +150,17 @@
     [parameterDic setValue:@"password"forKey:@"password"];
 
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.label.text =@"Loading";
+    hud.label.text     = @"Loading";
     [PPNetworkHelper POST:CSRBroker_URL parameters:parameterDic responseCache:^(id responseCache) {
-
+        
     } success:^(id responseObject) {
-
+        
         [MBProgressHUD hideHUDForView:self.view animated:NO];
         WebChatTableViewController *WebChat =[[WebChatTableViewController alloc]init];
         [self.navigationController pushViewController:WebChat animated:NO];
 
     } failure:^(NSError *error) {
-        NSLog(@"失败了==%@",error);
+        NSLog(@"失败了===%@",error);
     }];
-    
 }
 @end

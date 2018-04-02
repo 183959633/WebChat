@@ -27,12 +27,10 @@ typedef void (^dataBlock)(void);
  *  @brief  录制语音按钮
  */
 @property(nonatomic,strong)UIButton   *mVoiceBtn;
-
 /**
  *  @brief  表情按钮
  */
 @property(nonatomic,strong)UIButton   *mFaceBtn;
-
 /**
  *  @brief  更多按钮
  */
@@ -41,15 +39,11 @@ typedef void (^dataBlock)(void);
  *  @brief  更多视图
  */
 @property(nonatomic,strong)WebChatMessageMoreView  *mMoreView;
-
 /**
  *  @brief  表情视图
  */
 @property(nonatomic,strong)WebChatMessageEmojiView  *mFaceView;
 @property(nonatomic,copy)dataBlock datablock;
 @property(nonatomic,weak) id <WebChatMessageInputBarDelegate> delegate;
--(void)voiceBtnClick:(UIButton*)sender;
-//-(void)faceBtnClick:(UIButton*)sender;
-//-(void)moreBtnClick:(UIButton*)sender;
 @end
 

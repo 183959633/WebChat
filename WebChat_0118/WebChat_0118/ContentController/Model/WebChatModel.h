@@ -15,8 +15,6 @@
 
 //根据模型得到可重用Cell的 重用ID
 #define kCellReuseID(model)      ((model.chatCellType.integerValue == WebChatCellType_Time)?kTimeCellReusedID:(kCellReuseIDWithSenderAndType(model.isSender,model.chatCellType)))
-
-
 /**
  *  @brief  消息类型
  */

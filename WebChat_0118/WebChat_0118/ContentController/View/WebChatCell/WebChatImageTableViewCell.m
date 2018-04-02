@@ -8,13 +8,13 @@
 
 #import "WebChatImageTableViewCell.h"
 #import <Masonry.h>
-#define kImageViewPadding            (5)//图片距离背景框内间距
-#define kImageViewMaxHeight          (200)//展示图片最大高度
+#define mImageViewPadding            (5)//图片距离背景框内间距
+#define mImageViewMaxHeight          (200)//展示图片最大高度
 
 @interface WebChatImageTableViewCell ()
 {
-    //展示图片kImageView
-    UIImageView * kImageView;
+    //展示图片mImageView
+    UIImageView * mImageView;
 }
 @end
 
@@ -31,21 +31,21 @@
 }
 -(void)setUI{
     
-    kImageView = [[UIImageView alloc]init];
-    kImageView.backgroundColor = [UIColor clearColor];
-    kImageView.userInteractionEnabled = NO;
-    [self.contentView insertSubview:kImageView atIndex:0];
+    mImageView = [[UIImageView alloc]init];
+    mImageView.backgroundColor = [UIColor clearColor];
+    mImageView.userInteractionEnabled = NO;
+    [self.contentView insertSubview:mImageView atIndex:0];
     
     [mBubbleImageView mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.height.lessThanOrEqualTo(@(kImageViewMaxHeight+kMargin));
+        make.height.lessThanOrEqualTo(@(mImageViewMaxHeight+kMargin));
     }];
     
-    [kImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(mBubbleImageView.mas_top).offset(kImageViewPadding);
-        make.left.equalTo(mBubbleImageView.mas_left).offset(kImageViewPadding);
-        make.bottom.equalTo(mBubbleImageView.mas_bottom).offset(-kImageViewPadding);
-        make.right.equalTo(mBubbleImageView.mas_right).offset(-kImageViewPadding);
-        make.height.lessThanOrEqualTo(@(kImageViewMaxHeight));
+    [mImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(mBubbleImageView.mas_top).offset(mImageViewPadding);
+        make.left.equalTo(mBubbleImageView.mas_left).offset(mImageViewPadding);
+        make.bottom.equalTo(mBubbleImageView.mas_bottom).offset(-mImageViewPadding);
+        make.right.equalTo(mBubbleImageView.mas_right).offset(-mImageViewPadding);
+        make.height.lessThanOrEqualTo(@(mImageViewMaxHeight));
     }];
     
     if (isSender)//是自己发送的消息
@@ -68,6 +68,6 @@
 }
 -(void)setModel:(WebChatModel *)model
 {
-    kImageView.image = model.aImage;
+    mImageView.image = model.aImage;
 }
 @end

@@ -14,7 +14,6 @@ static NSInteger const  kimageSize = 28;
 @interface WebChatMessageEmojiCollectionCell ()
 {
     UIImageView *mImageView;
-    UILabel     *kLabel;
 }
 @end
 

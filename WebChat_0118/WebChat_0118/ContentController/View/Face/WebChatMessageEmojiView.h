@@ -13,7 +13,6 @@
 - (void)stickerKeyboard:(WebChatMessageEmojiView *)stickerKeyboard didClickEmoji:(NSString *)emojiName;
 - (void)stickerKeyboardDidClickDeleteButton:(WebChatMessageEmojiView *)stickerKeyboard;
 - (void)stickerKeyboardDidClickSendButton:(WebChatMessageEmojiView *)stickerKeyboard;
-
 @end
 
 @interface WebChatMessageEmojiView : UIView

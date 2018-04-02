@@ -109,7 +109,11 @@ static char kInstalledConstraintsKey;
 - (BOOL)isActive {
     BOOL active = YES;
     if ([self supportsActiveProperty]) {
-        active = [self.layoutConstraint isActive];
+        if (@available(iOS 8.0, *)) {
+            active = [self.layoutConstraint isActive];
+        } else {
+            // Fallback on earlier versions
+        }
     }
 
     return active;
@@ -306,7 +310,11 @@ static char kInstalledConstraintsKey;
     }
     
     if ([self supportsActiveProperty] && self.layoutConstraint) {
-        self.layoutConstraint.active = YES;
+        if (@available(iOS 8.0, *)) {
+            self.layoutConstraint.active = YES;
+        } else {
+            // Fallback on earlier versions
+        }
         [self.firstViewAttribute.view.mas_installedConstraints addObject:self];
         return;
     }
@@ -386,7 +394,11 @@ static char kInstalledConstraintsKey;
 
 - (void)uninstall {
     if ([self supportsActiveProperty]) {
-        self.layoutConstraint.active = NO;
+        if (@available(iOS 8.0, *)) {
+            self.layoutConstraint.active = NO;
+        } else {
+            // Fallback on earlier versions
+        }
         [self.firstViewAttribute.view.mas_installedConstraints removeObject:self];
         return;
     }

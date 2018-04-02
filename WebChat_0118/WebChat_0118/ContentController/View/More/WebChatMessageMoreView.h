@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "WebChatModel.h"
-//#define kNotificationImage (@"kNotificationImage")
 extern NSString *const kNotificationImage;
 /**
  *  @brief  更多、图片、段视频、文件等
@@ -17,18 +16,13 @@ extern NSString *const kNotificationImage;
 /**
  *  @brief  选取图片按钮
  */
-@property(nonatomic,strong)UIButton   *kPhotoBtn;
+@property(nonatomic,strong)UIButton   *mPhotoBtn;
 /**
  *  @brief  拍摄照片按钮
  */
-@property(nonatomic,strong)UIButton   *kShotBtn;
+@property(nonatomic,strong)UIButton   *mShotBtn;
 /**
  *  @brief  视频聊天按钮
  */
-@property(nonatomic,strong)UIButton   *kVideoBtn;
-//#pragma model
-//@property(nonatomic,strong)WebChatModel *model;
-//#pragma 数据源
-//@property(nonatomic,strong)NSMutableArray *dataArray;
--(void)kPhotoBtnClick;
+@property(nonatomic,strong)UIButton   *mVideoBtn;
 @end

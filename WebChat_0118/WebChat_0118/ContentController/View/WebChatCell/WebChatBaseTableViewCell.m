@@ -41,9 +41,7 @@
         }];
         
         NSArray *IDs = [reuseIdentifier componentsSeparatedByString:kReuseIDSeparate];
-        
         NSAssert(IDs.count >= 2, @"reuseIdentifier should be separate by -");
-        
         isSender = [IDs[0] boolValue];
     
         if (isSender)//是我自己发送的

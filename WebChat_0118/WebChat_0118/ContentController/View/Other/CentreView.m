@@ -34,7 +34,6 @@
         make.height.mas_offset(64);
         make.centerX.equalTo(self.mas_centerX);
         make.top.equalTo(self.mas_top).offset(kDefaultMargin);
-        
     }];
     
     [self addSubview:self.kShowLabel];
@@ -46,33 +45,32 @@
 }
 -(UIImageView *)kShowImageView
 {
-    if (!_kShowImageView) {
-        _kShowImageView = [[UIImageView alloc]init];
-        _kShowImageView.backgroundColor = [UIColor clearColor];
-        _kShowImageView.image = [UIImage imageNamed:@"cancel_audio"];
-        _kShowImageView.animationImages = @[[UIImage imageNamed:@"sender_audio_01"],
+    if (!_mShowImageView) {
+        _mShowImageView = [[UIImageView alloc]init];
+        _mShowImageView.backgroundColor = [UIColor clearColor];
+        _mShowImageView.image = [UIImage imageNamed:@"cancel_audio"];
+        _mShowImageView.animationImages = @[[UIImage imageNamed:@"sender_audio_01"],
                                            [UIImage imageNamed:@"sender_audio_02"],
                                            [UIImage imageNamed:@"sender_audio_03"],
                                            [UIImage imageNamed:@"sender_audio_04"],
                                            [UIImage imageNamed:@"sender_audio_05"]];
         // 设置动画的播放次数
-        _kShowImageView.animationRepeatCount = 0;
+        _mShowImageView.animationRepeatCount = 0;
         // 设置播放时长
-        _kShowImageView.animationDuration = 2.0;
+        _mShowImageView.animationDuration    = 2.0;
     }
-    return _kShowImageView;
+    return _mShowImageView;
 }
 -(UILabel*)kShowLabel{
     
-    if (!_kShowLabel) {
-         _kShowLabel = [[UILabel alloc]init];
-        _kShowLabel.text            = @"手指上滑,取消发送";
-        _kShowLabel.textColor       = [UIColor whiteColor];
-        _kShowLabel.backgroundColor = [UIColor clearColor];
-        _kShowLabel.textAlignment   = NSTextAlignmentCenter;
-        _kShowLabel.font            = [UIFont systemFontOfSize:14.0f];
-
+    if (!_mShowLabel) {
+         _mShowLabel = [[UILabel alloc]init];
+        _mShowLabel.text            = @"手指上滑,取消发送";
+        _mShowLabel.textColor       = [UIColor whiteColor];
+        _mShowLabel.backgroundColor = [UIColor clearColor];
+        _mShowLabel.textAlignment   = NSTextAlignmentCenter;
+        _mShowLabel.font            = [UIFont systemFontOfSize:14.0f];
     }
-    return _kShowLabel;
+    return _mShowLabel;
 }
 @end

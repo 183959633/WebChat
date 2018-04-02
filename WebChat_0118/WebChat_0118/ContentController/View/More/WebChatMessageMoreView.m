@@ -12,7 +12,7 @@
 #import "JackHttp.h"
 #import <AFHTTPSessionManager.h>
 #import "UIImage+aScaling.h"
-NSString *const kNotificationImage =@"kNotificationImage";
+NSString *const kNotificationImage = @"kNotificationImage";
 @interface WebChatMessageMoreView()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 {
     //AFN 上传管理者
@@ -33,14 +33,14 @@ NSString *const kNotificationImage =@"kNotificationImage";
 #pragma 初始化UI界面
 -(void)setUI{
     
-    [self addSubview:self.kPhotoBtn];
-    [self addSubview:self.kShotBtn];
-    [self addSubview:self.kVideoBtn];
+    [self addSubview:self.mPhotoBtn];
+    [self addSubview:self.mShotBtn];
+    [self addSubview:self.mVideoBtn];
     
     NSMutableArray  *array = [NSMutableArray new];
-    [array addObject:_kPhotoBtn];
-    [array addObject:_kShotBtn];
-    [array addObject:_kVideoBtn];
+    [array addObject:_mPhotoBtn];
+    [array addObject:_mShotBtn];
+    [array addObject:_mVideoBtn];
     
     [array mas_distributeViewsAlongAxis:MASAxisTypeHorizontal withFixedSpacing:20 leadSpacing:20 tailSpacing:20];
     [array mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -48,62 +48,62 @@ NSString *const kNotificationImage =@"kNotificationImage";
         make.height.mas_equalTo(90);
     }];
 }
--(UIButton*)kPhotoBtn{
-    if (!_kPhotoBtn) {
-        _kPhotoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_kPhotoBtn setTitle:@"图片" forState:UIControlStateNormal];
-        _kPhotoBtn.titleLabel.font=[UIFont systemFontOfSize:14.0f];
-        [_kPhotoBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [_kPhotoBtn setTitleEdgeInsets:UIEdgeInsetsMake(30, -30, 0, 0)];
-        [_kPhotoBtn setImageEdgeInsets:UIEdgeInsetsMake(-30, 30, 0, 0)];
-        [_kPhotoBtn setImage:[UIImage imageNamed:@"photo"]
+-(UIButton*)mPhotoBtn{
+    if (!_mPhotoBtn) {
+        _mPhotoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_mPhotoBtn setTitle:@"图片" forState:UIControlStateNormal];
+        _mPhotoBtn.titleLabel.font=[UIFont systemFontOfSize:14.0f];
+        [_mPhotoBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_mPhotoBtn setTitleEdgeInsets:UIEdgeInsetsMake(30, -30, 0, 0)];
+        [_mPhotoBtn setImageEdgeInsets:UIEdgeInsetsMake(-30, 30, 0, 0)];
+        [_mPhotoBtn setImage:[UIImage imageNamed:@"photo"]
                     forState:UIControlStateNormal];
-        [_kPhotoBtn addTarget:self action:@selector(kPhotoBtnClick) forControlEvents:UIControlEventTouchUpInside];
+        [_mPhotoBtn addTarget:self action:@selector(aPhotoBtnClick) forControlEvents:UIControlEventTouchUpInside];
     }
-    return _kPhotoBtn;
+    return _mPhotoBtn;
 }
--(UIButton*)kShotBtn{
-    if (!_kShotBtn) {
-        _kShotBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_kShotBtn setTitle:@"拍摄" forState:UIControlStateNormal];
-        _kShotBtn.titleLabel.font=[UIFont systemFontOfSize:14.0f];
-        [_kShotBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [_kShotBtn setTitleEdgeInsets:UIEdgeInsetsMake(30, -30, 0, 0)];
-        [_kShotBtn setImageEdgeInsets:UIEdgeInsetsMake(-30, 30, 0, 0)];
-        [_kShotBtn setImage:[UIImage imageNamed:@"shot"]
+-(UIButton*)mShotBtn{
+    if (!_mShotBtn) {
+        _mShotBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_mShotBtn setTitle:@"拍摄" forState:UIControlStateNormal];
+        _mShotBtn.titleLabel.font=[UIFont systemFontOfSize:14.0f];
+        [_mShotBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_mShotBtn setTitleEdgeInsets:UIEdgeInsetsMake(30, -30, 0, 0)];
+        [_mShotBtn setImageEdgeInsets:UIEdgeInsetsMake(-30, 30, 0, 0)];
+        [_mShotBtn setImage:[UIImage imageNamed:@"shot"]
                    forState:UIControlStateNormal];
-        [_kShotBtn addTarget:self action:@selector(kShotBtnClick) forControlEvents:UIControlEventTouchUpInside];
+        [_mShotBtn addTarget:self action:@selector(aShotBtnClick) forControlEvents:UIControlEventTouchUpInside];
     }
-    return _kShotBtn;
+    return _mShotBtn;
 }
--(UIButton*)kVideoBtn{
-    if (!_kVideoBtn) {
-        _kVideoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_kVideoBtn setTitle:@"视频" forState:UIControlStateNormal];
-        _kVideoBtn.titleLabel.font=[UIFont systemFontOfSize:14.0f];
-        [_kVideoBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [_kVideoBtn setTitleEdgeInsets:UIEdgeInsetsMake(30, -30, 0, 0)];
-        [_kVideoBtn setImageEdgeInsets:UIEdgeInsetsMake(-30, 30, 0, 0)];
-        [_kVideoBtn setImage:[UIImage imageNamed:@"video"]
+-(UIButton*)mVideoBtn{
+    if (!_mVideoBtn) {
+        _mVideoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_mVideoBtn setTitle:@"视频" forState:UIControlStateNormal];
+        _mVideoBtn.titleLabel.font=[UIFont systemFontOfSize:14.0f];
+        [_mVideoBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_mVideoBtn setTitleEdgeInsets:UIEdgeInsetsMake(30, -30, 0, 0)];
+        [_mVideoBtn setImageEdgeInsets:UIEdgeInsetsMake(-30, 30, 0, 0)];
+        [_mVideoBtn setImage:[UIImage imageNamed:@"video"]
                     forState:UIControlStateNormal];
-        [_kVideoBtn addTarget:self action:@selector(kVideoBtnClick) forControlEvents:UIControlEventTouchUpInside];
+        [_mVideoBtn addTarget:self action:@selector(aVideoBtnClick) forControlEvents:UIControlEventTouchUpInside];
     }
-    return _kVideoBtn;
+    return _mVideoBtn;
 }
 #pragma 照片Method
--(void)kPhotoBtnClick{
+-(void)aPhotoBtnClick{
     UIImagePickerController *imageVC = [[UIImagePickerController alloc] init];
-    imageVC.delegate = self;
+    imageVC.delegate   = self;
     imageVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     [[self viewController].navigationController presentViewController:imageVC animated:YES completion:nil];
 }
 #pragma 拍照Method
--(void)kShotBtnClick{
+-(void)aShotBtnClick{
     UIImagePickerControllerSourceType sourceType = UIImagePickerControllerSourceTypeCamera;
     if ([UIImagePickerController isSourceTypeAvailable: sourceType])
     {
         UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-        picker.delegate = self;
+        picker.delegate   = self;
         picker.sourceType = sourceType;
         [[self viewController].navigationController presentViewController:picker animated:YES completion:nil];
     }else
@@ -112,7 +112,7 @@ NSString *const kNotificationImage =@"kNotificationImage";
     }
 }
 #pragma 视频Method
--(void)kVideoBtnClick{
+-(void)aVideoBtnClick{
     
 }
 #pragma mark - UIImagePickerController Delegate
@@ -130,10 +130,10 @@ NSString *const kNotificationImage =@"kNotificationImage";
         
         //按比例缩放图片,优化显示效果
         image = [image scaleWithHeight:200];
-        WebChatModel *model =[[WebChatModel alloc]init];
-        model.isSender     = YES;
-        model.aImage       = image;
-        model.chatCellType = WebChatCellType_Image;
+        WebChatModel *model = [[WebChatModel alloc]init];
+        model.isSender      = YES;
+        model.aImage        = image;
+        model.chatCellType  = WebChatCellType_Image;
         [[NSNotificationCenter defaultCenter]postNotificationName:kNotificationImage object:self userInfo:@{@"aImage":model}];
         
         //开启上传
@@ -148,25 +148,26 @@ NSString *const kNotificationImage =@"kNotificationImage";
     
     NSString   *typeString;
     NSString   *fileName;
-    path =[NSString stringWithFormat:@"%@",path];
-    path =[path substringFromIndex:7];
+    path = [NSString stringWithFormat:@"%@",path];
+    path = [path substringFromIndex:7];
     
     if ([path containsString:@"jpeg"]) {
-        typeString =@"image/jpeg";
-        fileName   =@".jpeg";
+        typeString = @"image/jpeg";
+        fileName   = @".jpeg";
     }else if ([path containsString:@"png"]){
-        typeString =@"image/png";
-        fileName   =@".png";
+        typeString = @"image/png";
+        fileName   = @".png";
     }
     manager = [AFHTTPSessionManager manager];
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:
+                                                         @"application/json",
                                                          @"text/json",
                                                          @"text/html",
                                                          @"image/png",
                                                          @"image/jpeg",
                                                          @"application/octet-stream",
                                                          nil];
-
+    
     manager.requestSerializer= [AFHTTPRequestSerializer serializer];
     manager.responseSerializer= [AFJSONResponseSerializer serializer];
     
@@ -176,7 +177,7 @@ NSString *const kNotificationImage =@"kNotificationImage";
         
         //上传的参数(上传图片，以文件流的格式)
         [formData appendPartWithFileData:data
-                                name:@"file"
+                                    name:@"file"
                                 fileName:fileName
                                 mimeType:typeString];
     } progress:^(NSProgress * _Nonnull uploadProgress) {
@@ -184,7 +185,7 @@ NSString *const kNotificationImage =@"kNotificationImage";
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSLog(@"上传成功===%@",responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"上传失败%@",error);
+        NSLog(@"上传失败===%@",error);
     }];
     
 }

@@ -9,9 +9,8 @@
 #import <UIKit/UIKit.h>
 typedef void (^resignBlock)(void);
 @interface LoginView : UIView
-//暴露出去,隐藏键盘
 @property(nonatomic,strong)UITextField   *kNumberTextField;
 @property(nonatomic,strong)UITextField   *passwordTextField;
-@property(nonatomic,strong)UIButton      *loginButton;/**登陆按钮loginButton**/
+@property(nonatomic,strong)UIButton      *loginButton;
 @property(nonatomic,copy)resignBlock     resignblock;
 @end

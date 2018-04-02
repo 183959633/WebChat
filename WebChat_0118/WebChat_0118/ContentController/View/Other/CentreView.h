@@ -10,7 +10,7 @@
 
 @interface CentreView : UIView
 #pragma 录音动画ImageView
-@property(nonatomic,strong)UIImageView *kShowImageView;
+@property(nonatomic,strong)UIImageView *mShowImageView;
 #pragma 录音动画Label
-@property(nonatomic,strong)UILabel *kShowLabel;
+@property(nonatomic,strong)UILabel *mShowLabel;
 @end

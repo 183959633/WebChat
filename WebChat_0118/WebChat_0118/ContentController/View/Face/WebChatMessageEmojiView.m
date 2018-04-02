@@ -11,7 +11,7 @@
 #import "WebChatCustomHorizontalLayout.h"
 #import <Masonry.h>
 
-#define kHeightFaceView              (170)
+#define kHeightFaceView               (170)
 //表情个数
 #define kFaceNum                      (69)
 //发送按钮默认高度
@@ -29,7 +29,6 @@
 }
 //CollectionView数据源
 @property(nonatomic,retain)NSArray *DataSource;
-
 @end
 @implementation WebChatMessageEmojiView
 -(instancetype)init
@@ -64,7 +63,7 @@
     
     self.backgroundColor = [UIColor clearColor];
     
-    WebChatCustomHorizontalLayout * layout =[[WebChatCustomHorizontalLayout alloc]initWithitemCountPerRow:7 AndrowCount:3];
+    WebChatCustomHorizontalLayout *layout = [[WebChatCustomHorizontalLayout alloc]initWithitemCountPerRow:7 AndrowCount:3];
     [layout setItemSize:CGSizeMake([UIScreen mainScreen].bounds.size.width/7-10, (kHeightFaceView - kHeightBtn)/3-20)];
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     layout.sectionInset = UIEdgeInsetsMake(6,6,6, 6);
@@ -125,15 +124,12 @@
     if (self.delegate && [self.delegate respondsToSelector:@selector(stickerKeyboardDidClickSendButton:)]) {
         [self.delegate stickerKeyboardDidClickSendButton:self];
     }
-
 }
 #pragma 读取Expression文件
 -(NSArray *)getExpressionWithPlist
 {
     NSBundle *bundle = [NSBundle mainBundle];
-    
     NSString  *path = [bundle pathForResource:@"Expression" ofType:@"plist"];
-    
     NSArray   *RootExpression = [[NSArray alloc]initWithContentsOfFile:path];
     
     NSArray   *Expression;
@@ -163,7 +159,7 @@
 }
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"选中了:%ld",(long)indexPath.row);
+    NSLog(@"选中了===%ld",(long)indexPath.row);
     [[UIDevice currentDevice] playInputClick];
     if (indexPath.row  == 20 || indexPath.row == 41 || indexPath.row == 62 || indexPath.row == 83) {
         

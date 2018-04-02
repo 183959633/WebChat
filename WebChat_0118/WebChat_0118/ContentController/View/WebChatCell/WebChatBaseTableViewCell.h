@@ -15,17 +15,15 @@
 #define kImageViewTopSuperView        (15)//背景框距离父视图顶部距离
 #define kMargin                       (10)//头像外边距
 #define kImageViewMargin              (30)//设置背景框拉伸不变形范围
-#define kOffsetHHeadToBubble          (0)//背景框与头像间距
+#define kOffsetHHeadToBubble          (0) //背景框与头像间距
 
 #define kReuseIDSeparate               (@"-") //可重用ID字符串区分符号
 
 #define kImageNameChat_send_nor        (@"chat_send_nor")
 #define kImageNameChat_send_press      (@"chat_send_press_pic")
 
-
 #define kImageNameChat_Recieve_nor     (@"chat_recive_nor")
 #define kImageNameChat_Recieve_press   (@"chat_recive_press_pic")
-
 
 @interface WebChatBaseTableViewCell : UITableViewCell
 {

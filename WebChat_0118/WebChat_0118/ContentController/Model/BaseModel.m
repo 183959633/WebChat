@@ -14,7 +14,6 @@
     if (!dic || ![dic isKindOfClass:[NSDictionary class]]) {
         return nil;
     }
-    
     if (self = [super init]) {
         for (NSString *key in [dic allKeys]) {
             id value = dic[key];

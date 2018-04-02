@@ -19,7 +19,7 @@
 #import "WebChatBaseTableViewCell.h"
 #import <AVFoundation/AVFoundation.h>
 #import <Speech/Speech.h>
-#import <AFNetworking.h>
+
 #define kBkColorTableView           ([UIColor colorWithRed:240/255.0f green:240/255.0f blue:240/255.0f alpha:1])
 #define mInputBtnbackgroundColor    ([UIColor colorWithRed:200/255.0 green:200/255.0 blue:200/255.0 alpha:1])
 
@@ -32,10 +32,10 @@
 //无缝边距
 #define kZeroMargin              (0)
 @interface WebChatTableViewController ()<UITableViewDelegate,
-UITableViewDataSource,
-UIScrollViewDelegate,
-SFSpeechRecognitionTaskDelegate,
-WebChatMessageInputBarDelegate>
+                                        UITableViewDataSource,
+                                        UIScrollViewDelegate,
+                                        SFSpeechRecognitionTaskDelegate,
+                                        WebChatMessageInputBarDelegate>
 @end
 @implementation WebChatTableViewController
 {
@@ -458,7 +458,7 @@ WebChatMessageInputBarDelegate>
                 [self scrollTableToFoot:YES];
                 isOK =NO;
             } failure:^(NSError *error) {
-                NSLog(@"请求失败====%@",error);
+                NSLog(@"请求失败===%@",error);
             }];
         }
     }
@@ -495,10 +495,13 @@ WebChatMessageInputBarDelegate>
         NSLog(@"轮询消息===%@",responseObject[@"result"]);
         if (![responseObject[@"result"]  isEqual:@"NONE"]) {
             NSArray  *array  = responseObject[@"result"];
-            NSLog(@"返回的信息array====%@",array);
+            NSLog(@"返回的信息array===%@",array);
             //更新轮询消息
             [self updatePollingMessage:array];
         }
+        //todo
+        //移除定时器
+        //[self removeTimerAboutPoll];
         
     } failure:^(NSError *error) {
         NSLog(@"轮询消息responseObject===%@",error);
@@ -508,9 +511,9 @@ WebChatMessageInputBarDelegate>
 -(void)updatePollingMessage:(NSArray*)data{
     
     for (id result in data) {
-        WebChatModel *model = [[WebChatModel alloc]init];
-        NSString           *t_String;
-        NSAttributedString *t_AttributedString;
+        WebChatModel *model   = [[WebChatModel alloc]init];
+        NSString              *t_String;
+        NSAttributedString    *t_AttributedString;
         if ([result[@"TYPE"]  isEqualToString:@"1010"] ) {
             t_String           = result[@"speakContent"];
             t_AttributedString = [self stringToAttributeString:t_String];
@@ -522,7 +525,7 @@ WebChatMessageInputBarDelegate>
             
             if ([result[@"role"]  isEqualToString:@"2"]) {
                 t_String                   = result[@"CONTENT"];
-                NSString *base64String     =[self dencode:t_String];
+                NSString *base64String     = [self dencode:t_String];
                 t_AttributedString         = [self stringToAttributeString:base64String];
                 model.isSender             = NO;
                 model.chatCellType         = WebChatCellType_Text;
@@ -553,7 +556,8 @@ WebChatMessageInputBarDelegate>
         _inputBar = [[WebChatMessageInputBar alloc]init];
         _inputBar.delegate =self;
         //给_mInputBtn添加长按手势
-        UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPress:)];
+        UILongPressGestureRecognizer *longPress =
+        [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPress:)];
         //属性设置
         //最小长按时间
         longPress.minimumPressDuration = 2;
@@ -597,7 +601,7 @@ WebChatMessageInputBarDelegate>
 }
 #pragma 开始录音
 -(void)startRecord{
-    t_Length =0;
+    t_Length = 0;
     [self addTimerAboutAudio];
     AVAudioSession *session =[AVAudioSession sharedInstance];
     NSError *sessionError;
@@ -657,7 +661,7 @@ WebChatMessageInputBarDelegate>
     /*判断该路径是否存在*/
     if ([fileManager fileExistsAtPath:filePath]){
         CGFloat kfileSize= [fileManager attributesOfItemAtPath:filePath error:nil].fileSize/1024.0;
-        NSLog(@"录音文件大小====%f",kfileSize);
+        NSLog(@"录音文件大小===%f",kfileSize);
         if (point.y > -35) {
             WebChatModel *model =[[WebChatModel alloc]init];
             model.isSender     = YES;
@@ -674,7 +678,7 @@ WebChatMessageInputBarDelegate>
             if (res) {
                 NSLog(@"已取消发送,文件删除成功");
             }else{
-                NSLog(@"文件是否存在==== %@",[fileManager isExecutableFileAtPath:filePath]?@"YES":@"NO");
+                NSLog(@"文件是否存在===%@",[fileManager isExecutableFileAtPath:filePath]?@"YES":@"NO");
             }
         }
     }
@@ -710,7 +714,7 @@ WebChatMessageInputBarDelegate>
         //显示_centreView
         _centreView.hidden =NO;
         //开始动画
-        [_centreView.kShowImageView startAnimating];
+        [_centreView.mShowImageView startAnimating];
         [_inputBar.mInputButton setTitle:@"松开 结束"forState:UIControlStateNormal];
         _inputBar.mInputButton.backgroundColor = mInputBtnbackgroundColor;
         
@@ -728,20 +732,20 @@ WebChatMessageInputBarDelegate>
     }else if (gesture.state == UIGestureRecognizerStateChanged){
         if (point.y >-35) {
             //开始动画
-            [_centreView.kShowImageView startAnimating];
-            _centreView.kShowLabel.text=@"手指上滑,取消发送";
+            [_centreView.mShowImageView startAnimating];
+            _centreView.mShowLabel.text=@"手指上滑,取消发送";
         }else{
-            _centreView.kShowLabel.text=@"松开手指,取消发送";
+            _centreView.mShowLabel.text=@"松开手指,取消发送";
             //停止动画
-            [_centreView.kShowImageView stopAnimating];
+            [_centreView.mShowImageView stopAnimating];
         }
     }else if(gesture.state == UIGestureRecognizerStateEnded){
         
-        _centreView.hidden =YES;
+        _centreView.hidden = YES;
         [_inputBar.mInputButton setTitle:@"按住 说话" forState:UIControlStateNormal];
         _inputBar.mInputButton.backgroundColor = [UIColor whiteColor];
-        _inputBar.mInputButton.hidden =YES;
-        _inputBar.mInputTextView.hidden =NO;
+        _inputBar.mInputButton.hidden   = YES;
+        _inputBar.mInputTextView.hidden = NO;
         
         //停止录音逻辑处理
         [self stopRecordWithCGPoint:point];
