@@ -144,23 +144,27 @@
     [self updataLogview];
 }
 -(void)Login{
+    
+    [MBProgressHUD hideHUDForView:self.view animated:NO];
+    WebChatTableViewController *WebChat =[[WebChatTableViewController alloc]init];
+    [self.navigationController pushViewController:WebChat animated:NO];
 
-    NSMutableDictionary *parameterDic =[[NSMutableDictionary alloc]init];
-    [parameterDic setValue:@"jack"    forKey:@"username"];
-    [parameterDic setValue:@"password"forKey:@"password"];
-
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.label.text     = @"Loading";
-    [PPNetworkHelper POST:CSRBroker_URL parameters:parameterDic responseCache:^(id responseCache) {
-        
-    } success:^(id responseObject) {
-        
-        [MBProgressHUD hideHUDForView:self.view animated:NO];
-        WebChatTableViewController *WebChat =[[WebChatTableViewController alloc]init];
-        [self.navigationController pushViewController:WebChat animated:NO];
-
-    } failure:^(NSError *error) {
-        NSLog(@"失败了===%@",error);
-    }];
+//    NSMutableDictionary *parameterDic =[[NSMutableDictionary alloc]init];
+//    [parameterDic setValue:@"jack"    forKey:@"username"];
+//    [parameterDic setValue:@"password"forKey:@"password"];
+//
+//    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+//    hud.label.text     = @"Loading";
+//    [PPNetworkHelper POST:CSRBroker_URL parameters:parameterDic responseCache:^(id responseCache) {
+//        
+//    } success:^(id responseObject) {
+//        
+//        [MBProgressHUD hideHUDForView:self.view animated:NO];
+//        WebChatTableViewController *WebChat =[[WebChatTableViewController alloc]init];
+//        [self.navigationController pushViewController:WebChat animated:NO];
+//
+//    } failure:^(NSError *error) {
+//        NSLog(@"失败了===%@",error);
+//    }];
 }
 @end

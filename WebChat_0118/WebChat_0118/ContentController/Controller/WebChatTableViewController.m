@@ -466,7 +466,7 @@
 #pragma 添加roomid_timer定时器
 - (void)addTimerAboutPoll
 {
-    roomid_timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(aRoomID) userInfo:nil repeats:YES];
+    roomid_timer = [NSTimer timerWithTimeInterval:1.0f target:self selector:@selector(aRoomID) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:roomid_timer forMode:NSRunLoopCommonModes];
 }
 #pragma 移除roomid_timer定时器
@@ -765,22 +765,10 @@
         t_isSender = @"1";
     }else{
         t_isSender = @"0";
+        
     }
     
-    NSString *t_chatCellType;
-    if (model.chatCellType == WebChatCellType_Text) {
-        t_chatCellType =@"WebChatCellType_Text";
-    }else if (model.chatCellType == WebChatCellType_Image){
-        t_chatCellType =@"WebChatCellType_Image";
-    }else if (model.chatCellType == WebChatCellType_Audio){
-        t_chatCellType =@"WebChatCellType_Audio";
-    }else if (model.chatCellType == WebChatCellType_Video){
-        t_chatCellType =@"WebChatCellType_Video";
-    }else if (model.chatCellType == WebChatCellType_Time){
-        t_chatCellType =@"WebChatCellType_Time";
-    }else if (model.chatCellType == WebChatCellType_Flicker){
-        t_chatCellType =@"WebChatCellType_Flicker";
-    }
+    NSString *t_chatCellType = [model getchatCellType:model.chatCellType];
     
     if (model.chatCellType == WebChatCellType_Text) {
         WebChatTextTableViewCell *cellText ;

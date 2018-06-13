@@ -207,16 +207,16 @@ NSString *const kNotificationImage = @"kNotificationImage";
 }
 #pragma 压缩图片大小
 -(NSData *)imageData:(UIImage *)aimage{
-    NSData *imageData=UIImageJPEGRepresentation(aimage, 1.0);
-    if (imageData.length>1024*1024) {
+    NSData *imageData = UIImageJPEGRepresentation(aimage, 1.0);
+    if (imageData.length > 1024*1024) {
         //1M以及以上
-        imageData=UIImageJPEGRepresentation(aimage, 0.2);
-    }else if (imageData.length>512*1024) {
+        imageData = UIImageJPEGRepresentation(aimage, 0.2);
+    }else if (imageData.length > 512*1024) {
         //0.5M-1M
-        imageData=UIImageJPEGRepresentation(aimage, 0.5);
-    }else if (imageData.length>200*1024) {
+        imageData = UIImageJPEGRepresentation(aimage, 0.5);
+    }else if (imageData.length > 200*1024) {
         //0.25M-0.5M
-        imageData=UIImageJPEGRepresentation(aimage, 0.8);
+        imageData = UIImageJPEGRepresentation(aimage, 0.8);
     }
     return imageData;
 }

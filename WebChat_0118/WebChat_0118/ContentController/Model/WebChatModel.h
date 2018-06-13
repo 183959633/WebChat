@@ -47,4 +47,5 @@ typedef NS_ENUM (NSUInteger, WebChatCellType) {
 @property(nonatomic,copy)     NSString  *aAudioPath;
 #pragma 消息类型
 @property (nonatomic,assign)  WebChatCellType  chatCellType;
+-(NSString*)getchatCellType:(WebChatCellType)type;
 @end
